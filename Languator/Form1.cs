@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Globalization;
 
 namespace Languator
 {
@@ -17,12 +16,30 @@ namespace Languator
         /// Dictionary with the words in (English, Polski)
         /// </summary>
         private Dictionary<string, string> trans = new Dictionary<string, string>();
-
+        /// <summary>
+        /// Array with the strings of the easter eggs.
+        /// </summary>
+        private String[] easter = new String[6] {"Vas happenin'?", "Hello", "Cześć", "Zayn rules", "Zaynlator", "Languator by Zayn"};
+        
         public Form1()
         {
             InitializeComponent();
             // Start the dicts
             InitializeDictionary();
+        }
+
+        private string getEasterEgg()
+        {
+            Random rnd = new Random();
+            string[] easterTemp = easter.OrderBy(x => rnd.Next()).ToArray();
+            if (helloLabel.Text != easterTemp[0])
+            {
+                return easterTemp[0];
+            }
+            else
+            {
+                return easterTemp[1];
+            }
         }
 
         /// <summary>
@@ -34,6 +51,8 @@ namespace Languator
             trans.Add("hello", "cześć");
             trans.Add("bye", "cześć");
             trans.Add("goodbye", "da widzanie");
+            trans.Add("my name is", "mam na imię...");
+            trans.Add("my name is...", "mam na imię...");
         }
    
         private void translatePolskiEnglish(String text)
@@ -45,11 +64,11 @@ namespace Languator
                 {
                     if (pair.Value == text)
                     {
-                        matches.Add(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(pair.Key));
+                        matches.Add(char.ToUpper(pair.Key[0]) + pair.Key.Substring(1));
                     }
                 }
                 String allthematches = String.Join(", ", matches.ToArray());
-                textBox1.Text = allthematches;
+                textEnglish.Text = allthematches;
             }
             else
             {
@@ -60,7 +79,7 @@ namespace Languator
         {
             if (trans.ContainsKey(text))
             {
-                textBox2.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(trans[text]);
+                textPolski.Text = char.ToUpper(trans[text][0]) + trans[text].Substring(1);
             }
             else
             {
@@ -70,29 +89,57 @@ namespace Languator
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This program has been develop by the Zayn Malik lovers team in Poland.",
+            MessageBox.Show("This program has been develop by the Zayn Malik lovers team in Joska's heart.",
                             "Vas happenin?", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "")
+            if (textEnglish.Text != "" && textPolski.Text != "")
             {
                 MessageBox.Show("Please, void one of both textboxes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (textBox1.Text == "" && textBox2.Text != "")
+            else if (textEnglish.Text == "" && textPolski.Text != "")
             {
-                translatePolskiEnglish(textBox2.Text.ToLower());
+                translatePolskiEnglish(textPolski.Text.ToLower());
             }
-            else if (textBox2.Text == "" && textBox1.Text != "")
+            else if (textPolski.Text == "" && textEnglish.Text != "")
             {
-                translateEnglishPolski(textBox1.Text.ToLower());
+                translateEnglishPolski(textEnglish.Text.ToLower());
             }
             else
             {
                 MessageBox.Show("You must write something in either one of both textboxes!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void labelEnglish_Click(object sender, EventArgs e)
+        {
+            textEnglish.Text = "";
+        }
+
+        private void labelPolski_Click(object sender, EventArgs e)
+        {
+            textPolski.Text = "";
+        }
+
+        private void helloLabel_Click(object sender, EventArgs e)
+        {
+            helloLabel.Text = getEasterEgg();
+        }
+
+        private void aboutLanguatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 ab = new AboutBox1();
+            ab.Show();
+        }
+
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
 
 
     }

@@ -1,0 +1,10 @@
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\bin\Release\Languator.exe.config
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\bin\Release\Database1.sdf
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\bin\Release\Languator.exe
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\bin\Release\Languator.pdb
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Release\Languator.AboutBox1.resources
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Release\Languator.Form1.resources
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Release\Languator.Properties.Resources.resources
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Release\Languator.csproj.GenerateResource.Cache
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Release\Languator.exe
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Release\Languator.pdb

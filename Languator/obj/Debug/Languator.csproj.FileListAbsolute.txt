@@ -8,3 +8,4 @@ c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Deb
 c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Debug\Languator.exe
 c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Debug\Languator.pdb
 c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\bin\Debug\Database1.sdf
+c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Debug\Languator.AboutBox1.resources
