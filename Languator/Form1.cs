@@ -47,12 +47,70 @@ namespace Languator
         /// </summary>
         private void InitializeDictionary()
         {
-            // ENGLISH to POLSKI
+            #region Translations (add yours here)
+
+            #region Greetings (built-in)
             trans.Add("hello", "cześć");
             trans.Add("bye", "cześć");
             trans.Add("goodbye", "da widzanie");
+            trans.Add("good morning", "dzień dobry");
+            trans.Add("good evening", "dobry wieczór");
+            trans.Add("good night", "dobranoc");
+            #endregion
+
+            #region Simple phrases (built-in)
             trans.Add("my name is", "mam na imię...");
             trans.Add("my name is...", "mam na imię...");
+            trans.Add("you're very attractive", "bardzo mi się podobasz");
+            trans.Add("i love you", "kocham Cię");
+            trans.Add("i don't understand", "nie rozumiem");
+            trans.Add("what's your name?", "jak masz na imię?");
+            trans.Add("nice to meet you", "miło mi cię poznać");
+            trans.Add("how old are you?", "ile masz ma lat?");
+            trans.Add("good", "dobrze");
+            trans.Add("bad", "źle");
+            trans.Add("whore", "kurwa");
+            trans.Add("bitch", "kurwa");
+            trans.Add("fuck", "kurwa");
+            trans.Add("asshole", "dupek");
+            trans.Add("fuck off", "spierdalaj");
+            trans.Add("gay", "cwel");
+            trans.Add("queer", "cwel");
+            trans.Add("faggot", "cwel");
+            trans.Add("shit", "gowno");
+            #endregion
+
+            #region Pronouns (nominative) (built-in)
+            trans.Add("i", "ja");
+            trans.Add("you", "ty, wy (pl.)");
+            trans.Add("he", "on");
+            trans.Add("she", "ona");
+            trans.Add("it", "ono");
+            trans.Add("we", "my");
+            trans.Add("you (plural", "wy");
+            trans.Add("they", "oni (at least one male), one (no male)");
+            #endregion
+
+            #region Grammar (built-in)
+            trans.Add("nominative", "mianownik");
+            trans.Add("genitive", "dopełniacz");
+            trans.Add("dative", "celownik");
+            trans.Add("accusative", "biernik");
+            trans.Add("instrumental", "narzędnik");
+            trans.Add("locative", "miejscownik");
+            trans.Add("vocative", "wołacz");
+            #endregion
+
+            /*
+             * Insert custom translations below. Please, follow the pattern.
+             * Template: trans.Add("english word/phrase", "polish word/phrase");
+             * IMPORTANT: Use lowercase!
+             */
+
+            #region Custom (add here!)
+            trans.Add("example", "przykład");
+            #endregion
+            #endregion
         }
    
         private void translatePolskiEnglish(String text)
