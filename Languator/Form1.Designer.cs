@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.helloLabel = new System.Windows.Forms.Label();
-            this.zaynPicture = new System.Windows.Forms.PictureBox();
+            this.mainPicture = new System.Windows.Forms.PictureBox();
             this.labelEnglish = new System.Windows.Forms.Label();
             this.labelPolski = new System.Windows.Forms.Label();
             this.textEnglish = new System.Windows.Forms.TextBox();
@@ -40,10 +40,10 @@
             this.globalToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutLanguatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.zaynPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainPicture)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,18 +62,19 @@
             this.globalToolTip.SetToolTip(this.helloLabel, "Click and see vas happenin\'...");
             this.helloLabel.Click += new System.EventHandler(this.helloLabel_Click);
             // 
-            // zaynPicture
+            // mainPicture
             // 
-            this.zaynPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.zaynPicture.Image = ((System.Drawing.Image)(resources.GetObject("zaynPicture.Image")));
-            this.zaynPicture.Location = new System.Drawing.Point(118, 77);
-            this.zaynPicture.Name = "zaynPicture";
-            this.zaynPicture.Size = new System.Drawing.Size(218, 177);
-            this.zaynPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.zaynPicture.TabIndex = 1;
-            this.zaynPicture.TabStop = false;
-            this.globalToolTip.SetToolTip(this.zaynPicture, "Click for some magic");
-            this.zaynPicture.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.mainPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mainPicture.Image = global::Languator.Properties.Resources.resumé;
+            this.mainPicture.Location = new System.Drawing.Point(118, 77);
+            this.mainPicture.Name = "mainPicture";
+            this.mainPicture.Size = new System.Drawing.Size(218, 177);
+            this.mainPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.mainPicture.TabIndex = 1;
+            this.mainPicture.TabStop = false;
+            this.mainPicture.Tag = "resumé";
+            this.globalToolTip.SetToolTip(this.mainPicture, "Click for some magic");
+            this.mainPicture.Click += new System.EventHandler(this.mainPicture_Click);
             // 
             // labelEnglish
             // 
@@ -143,6 +144,13 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -158,13 +166,6 @@
             this.aboutLanguatorToolStripMenuItem.Text = "About Languator";
             this.aboutLanguatorToolStripMenuItem.Click += new System.EventHandler(this.aboutLanguatorToolStripMenuItem_Click);
             // 
-            // closeToolStripMenuItem
-            // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.closeToolStripMenuItem.Text = "Close";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AcceptButton = this.acceptButton;
@@ -176,7 +177,7 @@
             this.Controls.Add(this.textEnglish);
             this.Controls.Add(this.labelPolski);
             this.Controls.Add(this.labelEnglish);
-            this.Controls.Add(this.zaynPicture);
+            this.Controls.Add(this.mainPicture);
             this.Controls.Add(this.helloLabel);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -184,7 +185,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Languator";
-            ((System.ComponentModel.ISupportInitialize)(this.zaynPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainPicture)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -195,7 +196,7 @@
         #endregion
 
         private System.Windows.Forms.Label helloLabel;
-        private System.Windows.Forms.PictureBox zaynPicture;
+        private System.Windows.Forms.PictureBox mainPicture;
         private System.Windows.Forms.Label labelEnglish;
         private System.Windows.Forms.Label labelPolski;
         private System.Windows.Forms.TextBox textEnglish;

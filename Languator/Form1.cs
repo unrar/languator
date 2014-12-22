@@ -145,10 +145,21 @@ namespace Languator
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void mainPicture_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This program has been develop by the Zayn Malik lovers team in Joska's heart.",
-                            "Vas happenin?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            /*MessageBox.Show("This program has been develop by the Zayn Malik lovers team in Joska's heart.",
+                            "Vas happenin?", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+            // Change the picture
+            if ((string)mainPicture.Tag == "resumé")
+            {
+                mainPicture.Image = Languator.Properties.Resources.kate_moss_nude;
+                mainPicture.Tag = "kate_moss_nude";
+            }
+            else
+            {
+                mainPicture.Image = Languator.Properties.Resources.resumé;
+                mainPicture.Tag = "resumé";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -197,6 +208,8 @@ namespace Languator
         {
             Application.Exit();
         }
+
+
 
 
 

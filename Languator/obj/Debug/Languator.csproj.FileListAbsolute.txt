@@ -9,3 +9,14 @@ c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Deb
 c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Debug\Languator.pdb
 c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\bin\Debug\Database1.sdf
 c:\users\tomeu\documents\visual studio 2012\Projects\Languator\Languator\obj\Debug\Languator.AboutBox1.resources
+C:\Users\Tomeu\Source\Repos\languator\Languator\bin\Debug\Languator.exe.config
+C:\Users\Tomeu\Source\Repos\languator\Languator\obj\Debug\Languator.exe
+C:\Users\Tomeu\Source\Repos\languator\Languator\obj\Debug\Languator.pdb
+C:\Users\Tomeu\Source\Repos\languator\Languator\bin\Debug\Database1.sdf
+C:\Users\Tomeu\Source\Repos\languator\Languator\bin\Debug\Languator.exe
+C:\Users\Tomeu\Source\Repos\languator\Languator\bin\Debug\Languator.pdb
+C:\Users\Tomeu\Source\Repos\languator\Languator\obj\Debug\Languator.csprojResolveAssemblyReference.cache
+C:\Users\Tomeu\Source\Repos\languator\Languator\obj\Debug\Languator.AboutBox1.resources
+C:\Users\Tomeu\Source\Repos\languator\Languator\obj\Debug\Languator.Form1.resources
+C:\Users\Tomeu\Source\Repos\languator\Languator\obj\Debug\Languator.Properties.Resources.resources
+C:\Users\Tomeu\Source\Repos\languator\Languator\obj\Debug\Languator.csproj.GenerateResource.Cache
